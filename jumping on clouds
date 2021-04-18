@@ -1,0 +1,29 @@
+# hackerrank
+solution of hackerrank problems
+
+# Jumping On Clouds
+#Python 3
+
+sol 1:
+
+def jumpingOnClouds(c):
+    jump=0
+    i=0
+    while (i<n-1):
+        if (i+2<n and c[i+2]==0):
+            jump+=1
+            i+=2
+        elif (i+1<n and c[i+1]==0):
+            jump+=1
+            i+=1
+    return jump 
+    
+sol 2:
+   def jumpingOnClouds(c):
+    c.append(0)
+    jump=0
+    i=0
+    while (i<n-1):
+      i+=(c[i+2]==0)+1
+      jump+=1
+    return jump
