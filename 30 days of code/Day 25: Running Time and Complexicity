@@ -1,7 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import math
+
 def check(n):
     if n<=1:
         return False
-    for i in range(2,n):
+    s=math.sqrt(n)
+    if s.is_integer():
+        return False
+    for i in range(2,int(s)+1):
         if n%i==0:
             return False
     return True
@@ -13,3 +19,4 @@ for i in range(t):
         print("Prime")
     else:
         print("Not prime")
+
